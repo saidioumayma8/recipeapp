@@ -1,1 +1,4 @@
-<p>home works!</p>
+<div *ngFor="let recipe of recipes">
+  <h3>{{ recipe.strMeal }}</h3>
+  <img [src]="recipe.strMealThumb" alt="{{ recipe.strMeal }}" width="200" />
+</div>
