@@ -25,9 +25,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/colors/orange.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/style.css"
+            ]
           },
           "configurations": {
             "production": {

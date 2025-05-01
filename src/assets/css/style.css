@@ -9,7 +9,7 @@
 
 /*------------------------------------------------------------------
     [Table of contents]
-	
+
 	1. IMPORT FONTS
     2. IMPORT FILES
 	3. SKELETON
@@ -28,7 +28,7 @@
 	13. FOOTER AREA
 	14. COPYRIGHT AREA
 	15. COLOR SWITCHER AREA
-	
+
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -43,8 +43,7 @@
     IMPORT FILES
 -------------------------------------------------------------------*/
 
-@import url(owl.theme.css);
-@import url(owl.carousel.css);
+
 @import url(slick.css);
 @import url(flaticon.css);
 @import url(font-awesome.min.css);
@@ -201,14 +200,14 @@ html, body{ height: 100%; }
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-	text-align: center; 
+	text-align: center;
 	font-family: georgia;
 	position: fixed;
 	top: 0px;
 	width: 100%;
 	margin-bottom: 50px;
 	margin-left: -10px;
-} 
+}
 
 #loader  {
      position: fixed;
@@ -239,13 +238,13 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 .scrollup{
 	width:40px;
-	height:40px;			
+	height:40px;
 	text-indent:-9999px;
 	opacity:0.3;
 	position:fixed;
 	bottom:20px;
 	right:40px;
-	display:none;			
+	display:none;
 	background:url(../images/icon_top.png) no-repeat;
 }
 
@@ -258,7 +257,7 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 
 #site-header{
-	
+
 }
 #header{}
 .logo{
@@ -530,22 +529,6 @@ html, body{ height: 100%; }
     transform: translate3d(-50%, 20px, 0);
     opacity: 0;
   }
-  @media (min-width: 768px) {
-    from {
-      -webkit-transform: translate(-50%, 0);
-      -webkit-transform: translate3d(-50%, 0, 0);
-      transform: translate(-50%, 0);
-      transform: translate3d(-50%, 0, 0);
-      opacity: 1;
-    }
-    to {
-      -webkit-transform: translate(-50%, 40px);
-      -webkit-transform: translate3d(-50%, 40px, 0);
-      transform: translate(-50%, 40px);
-      transform: translate3d(-50%, 40px, 0);
-      opacity: 0;
-    }
-  }
 }
 
 @keyframes scrollWheel {
@@ -563,24 +546,9 @@ html, body{ height: 100%; }
     transform: translate3d(-50%, 20px, 0);
     opacity: 0;
   }
-  @media (min-width: 768px) {
-    from {
-      -webkit-transform: translate(-50%, 0);
-      -webkit-transform: translate3d(-50%, 0, 0);
-      transform: translate(-50%, 0);
-      transform: translate3d(-50%, 0, 0);
-      opacity: 1;
-    }
-    to {
-      -webkit-transform: translate(-50%, 40px);
-      -webkit-transform: translate3d(-50%, 40px, 0);
-      transform: translate(-50%, 40px);
-      transform: translate3d(-50%, 40px, 0);
-      opacity: 0;
-    }
-  }
+
 }
-	
+
 /*------------------------------------------------------------------
     ABOUT AREA
 -------------------------------------------------------------------*/
@@ -758,7 +726,7 @@ html, body{ height: 100%; }
 	width:100%;
 }
 .item-type-zoom .item-hover:hover {
-    opacity: 1;	
+    opacity: 1;
 }
 
 .item-type-zoom .item-hover:hover:before{
@@ -801,7 +769,7 @@ html, body{ height: 100%; }
 
 
 .menu-main{
-	
+
 }
 
 .menu-main .title-caption{
@@ -973,7 +941,7 @@ html, body{ height: 100%; }
     -moz-transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
     -ms-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;	
+    -o-transition: all 0.5s ease-in;
 }
 
 .text-col h3{
@@ -1041,7 +1009,7 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 
 .gallery-main{
-	
+
 }
 
 .gallery-main .title-caption{
@@ -1417,7 +1385,7 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 
 .reservations-main{
-	
+
 }
 
 .form-reservations-box{
@@ -1515,7 +1483,7 @@ html, body{ height: 100%; }
 }
 
 .reserve-book-btn{
-	padding-top:30px;	
+	padding-top:30px;
 }
 
 .reserve-book-btn button a{
@@ -1657,7 +1625,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     padding: 4px;
 }
 .footer-box {
-	background-image:-moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(..images/footer_background.jpg);
+	background-image:-moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/featured-image-01.jpg);
 	background-image:-webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/footer_background.jpg);
 	background-image:radial-gradient(ellipse at center, rgba(0, 0, 0, 0.57) 0%,rgba(0, 0, 0, 0.87) 100%), url(../images/footer_background.jpg);
 	background-color:#111;background-position:center;background-repeat:no-repeat;background-size:cover
@@ -1718,7 +1686,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 
 .footer-box-b ul li a:hover{
 	padding-left:5px;
-}	
+}
 
 .footer-box-c h3{
 	font-size:24px;
@@ -1866,7 +1834,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 
 #color-panel a.panel-button:hover{
 	color:#35cc75;
-}	
+}
 
 #color-panel h4{
 	margin:3px auto 15px;

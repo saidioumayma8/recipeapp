@@ -11,4 +11,3 @@ function importProvidersFrom(module: typeof HttpClientModule): import("@angular/
 bootstrapApplication(AppComponent, {
   providers: [importProvidersFrom(HttpClientModule)]
 });
-    throw new Error('Function not implemented.');
