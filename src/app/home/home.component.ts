@@ -15,12 +15,17 @@ export class HomeComponent implements OnInit {
   recipes: any[] = [];
   filteredRecipes: any[] = [];
   searchQuery: string = '';
+  categories: string[] = ['Beef', 'Chicken', 'Dessert', 'Pasta', 'Seafood', 'Vegetarian'];
+  selectedCategory: string = '';
 
-  constructor(private RecipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    // Load all recipes on page load
-    this.RecipeService.searchRecipesByName('').subscribe((data: any) => {
+    this.getAllRecipes(); // méthode bien définie maintenant
+  }
+
+  getAllRecipes(): void {
+    this.recipeService.getAllRecipes().subscribe((data: any) => {
       this.recipes = data || [];
       this.filteredRecipes = [...this.recipes];
     });
@@ -28,26 +33,22 @@ export class HomeComponent implements OnInit {
 
   onSearchInput(): void {
     if (!this.searchQuery.trim()) {
-      // If empty, show all again
       this.filteredRecipes = [...this.recipes];
     } else {
-      this.RecipeService.searchRecipesByName(this.searchQuery).subscribe((data: any) => {
+      this.recipeService.searchRecipesByName(this.searchQuery).subscribe((data: any) => {
         this.filteredRecipes = data || [];
       });
     }
   }
-  filterByCategory() {
+
+  filterByCategory(): void {
     if (this.selectedCategory) {
-      this.recipeService.getRecipesByCategory(this.selectedCategory).subscribe(data => {
-        this.recipes = data;
-        this.filteredRecipes = this.recipes;
+      this.recipeService.getRecipesByCategory(this.selectedCategory).subscribe((data: any) => {
+        this.recipes = data || [];
+        this.filteredRecipes = [...this.recipes];
       });
     } else {
-      this.getAllRecipes(); // recharger tout si catégorie vide
+      this.getAllRecipes(); // si aucune catégorie choisie
     }
   }
-
-  categories: string[] = ['Beef', 'Chicken', 'Dessert', 'Pasta', 'Seafood', 'Vegetarian'];
-selectedCategory: string = '';
-
 }
