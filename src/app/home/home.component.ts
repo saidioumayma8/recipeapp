@@ -3,11 +3,12 @@ import { RecipeService } from '../../app/recipeservice.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, FormsModule],
+  imports: [HttpClientModule, CommonModule, FormsModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    this.getAllRecipes(); // méthode bien définie maintenant
+    this.getAllRecipes();
   }
 
   getAllRecipes(): void {
@@ -48,7 +49,7 @@ export class HomeComponent implements OnInit {
         this.filteredRecipes = [...this.recipes];
       });
     } else {
-      this.getAllRecipes(); // si aucune catégorie choisie
+      this.getAllRecipes(); 
     }
   }
 }

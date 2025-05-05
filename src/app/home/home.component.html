@@ -105,21 +105,22 @@
                   <h2 class="block-title text-center">
                       Our recipe
                   </h2>
-
-                  <div class="row">
-                      <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="row" style="margin-bottom: 20px;">
+                  <div >
+                      <div class="col-md-6 col-sm-6 col-xs-6">
                           <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search recipes..." [(ngModel)]="searchQuery" (ngModelChange)="onSearchInput()">
                           </div>
                       </div>
                   </div>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <select class="form-control" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
                         <option value="">All Categories</option>
                         <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
                       </select>
                     </div>
+                  </div>
                   </div>
 
 
@@ -130,7 +131,7 @@
                                   <div class="blog-img-box">
                                       <img [src]="recipe.strMealThumb" alt="{{ recipe.strMeal }}" style="width: 100%;" />
                                       <div class="overlay">
-                                          <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
+                                          <a [routerLink]="['/recipe', recipe.idMeal]"><i class="fa fa-link" aria-hidden="true"></i></a>
                                       </div>
                                   </div>
                                   <div class="blog-dit">

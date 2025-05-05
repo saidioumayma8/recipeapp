@@ -1,14 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
+import { importProvidersFrom } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { RecipeDetailsComponent } from './recipe-detail/recipe-detail.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+
+const routes: Routes = [
+  { path: 'recipe/:id', component: RecipeDetailsComponent },
+  { path: '', component: HomeComponent }
+];
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent],
+  imports: [RouterModule, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipeapp';
+  title = 'Your Application';
 }
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(BrowserModule, RouterModule.forRoot(routes))
+  ]
+}).catch(err => console.error(err));
